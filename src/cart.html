@@ -7,24 +7,16 @@
   <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-br from-green-50 via-lime-100 to-emerald-50 font-sans min-h-screen flex flex-col">
-
-  <!-- Navbar -->
   <nav class="bg-green-600 text-white px-4 sm:px-6 py-3 flex justify-between items-center shadow">
     <h1 class="text-lg sm:text-2xl font-bold">🛒 Grocery Store</h1>
     <a href="index.html" class="bg-white text-green-600 px-3 sm:px-4 py-2 rounded-lg shadow hover:bg-gray-100 text-sm sm:text-base">
       ⬅ Back
     </a>
   </nav>
-
-  <!-- Cart Section -->
   <main class="flex-1 container mx-auto px-4 sm:px-6 py-8 sm:py-12">
     <div class="bg-white/90 p-6 sm:p-8 rounded-2xl shadow-lg backdrop-blur-sm">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Your Cart</h2>
-
-      <!-- Cart items -->
       <div id="cart-items" class="space-y-4 sm:space-y-6"></div>
-
-      <!-- Total + Checkout -->
       <div class="mt-6 p-4 bg-green-50 rounded-xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 shadow">
         <h3 class="text-lg sm:text-xl font-bold text-gray-800">
           Total: ₹<span id="cart-total">0</span>
