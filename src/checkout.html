@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-green-50 via-lime-100 to-emerald-50 font-sans min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-green-700 text-white px-4 sm:px-6 py-3 flex justify-between items-center shadow">
+    <h1 class="text-lg sm:text-xl font-bold">Checkout</h1>
+    <a href="cart.html" class="bg-white text-green-700 px-3 sm:px-4 py-2 rounded-full shadow hover:bg-green-100 text-sm sm:text-base">
+      ⬅ Back to Cart
+    </a>
+  </nav>
+
+  <!-- Checkout Content -->
+  <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Order Summary -->
+      <aside class="bg-white/90 p-6 rounded-2xl shadow-lg backdrop-blur-sm">
+        <h2 class="text-xl sm:text-2xl font-bold mb-4">Order Summary</h2>
+        <div id="checkout-list" class="space-y-4"></div>
+        <div class="border-t mt-4 pt-4 flex justify-between text-lg font-semibold">
+          <span>Total</span>
+          <span>₹<span id="checkout-total">0</span></span>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <section class="md:col-span-2 bg-white/90 p-6 rounded-2xl shadow-lg backdrop-blur-sm">
+        <h2 class="text-xl sm:text-2xl font-bold mb-4">Shipping & Payment</h2>
+
+        <form id="checkout-form" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" id="fullName" placeholder="Full Name *" required class="w-full border rounded-lg px-3 py-2">
+            <input type="tel" id="phone" placeholder="Phone *" required class="w-full border rounded-lg px-3 py-2">
+          </div>
+          <input type="text" id="address" placeholder="Address *" required class="w-full border rounded-lg px-3 py-2">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" id="city" placeholder="City *" required class="w-full border rounded-lg px-3 py-2">
+            <input type="text" id="zip" placeholder="ZIP Code *" required class="w-full border rounded-lg px-3 py-2">
+          </div>
+          <select id="payment" required class="w-full border rounded-lg px-3 py-2">
+            <option value="">Select Payment Method *</option>
+            <option value="COD">Cash on Delivery</option>
+            <option value="UPI">UPI</option>
+            <option value="Card">Card</option>
+          </select>
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-green-500 to-green-700 text-white py-3 rounded-full hover:scale-105 transition">
+            Place Order ✅
+          </button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="order-success" class="hidden mt-6 p-4 border rounded-lg bg-green-50 text-green-800">
+          <p class="font-semibold">🎉 Order placed successfully!</p>
+          <p class="mt-1">Order ID: <span id="order-id" class="font-mono"></span></p>
+          <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <a href="index.html" class="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 text-center">Continue Shopping</a>
+            <a href="cart.html" class="px-4 py-2 rounded-lg border border-green-600 text-green-700 hover:bg-green-100 text-center">View Cart</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>
