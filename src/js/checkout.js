@@ -47,17 +47,10 @@ checkoutForm.addEventListener("submit", (e) => {
     alert("🛒 Your cart is empty!");
     return;
   }
-
-  // Clear cart
   localStorage.removeItem("cart");
-
-  // Generate simple order ID
   const orderId = "ORD-" + Math.floor(1000 + Math.random() * 9000);
   orderIdSpan.textContent = orderId;
-
-  // Show success message
   orderSuccess.classList.remove("hidden");
   checkoutForm.classList.add("hidden");
 });
-
 document.addEventListener("DOMContentLoaded", renderCheckout);
